@@ -1,0 +1,19 @@
+.container {
+  width: 100px;
+  height: 100px;
+}
+
+$initial-color: #60B044;
+$goal-color: #F4f4f4;
+
+.initial-color {
+  background-color: $initial-color;
+}
+
+.goal-color {
+  background-color: $goal-color;
+}
+
+.try-color {
+  background-color: darken($initial-color, 4%);
+}
