@@ -24,27 +24,30 @@ $(document).on('keyup', function(event) {
   }
 })
 
-
+$(function(){
 $('.lazy').click(function() { 
   $('html').toggleClass("toggle");
   $('#lightbox-img').attr('src',$(this).prop('currentSrc'));
   $('.lightbox-caption').text($(this).next('figcaption').text());
   $('body').toggleClass("noscroll");
+})
 });
-                              
+    
+$(function(){                          
 $('.lightbox, .lightboxpers').click(function(){
   $('html').removeClass("toggle");
   $('#lightbox-img').attr('src', 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==');
   $('body').removeClass("noscroll");
+})
 });
 
 
-
-
+$(function(){  
 $('#button-return-top').click(function() {      // When arrow is clicked
     $('body,html').animate({
         scrollTop : 0                       // Scroll to top of body
     }, 500);
+})
 });
 
 $(function() {
@@ -89,7 +92,7 @@ document.body.classList.toggle("noscroll")}
 function openmobile() {
   document.body.classList.toggle("open-mobile")
 }
-
+$(function(){
 $(window).resize(function () {
   $( "body" ).removeClass("open open-desktop noscroll")
 })
@@ -138,6 +141,7 @@ $(window).scroll(function(){
     }
 });
 
+$(function(){ 
 // Hide Header on on scroll down
 var didScroll;
 var lastScrollTop = 0;
@@ -178,3 +182,5 @@ function hasScrolled() {
     
     lastScrollTop = st;
 }
+})
+});
